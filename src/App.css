@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 .App {
   text-align: center;
 }
@@ -36,44 +37,117 @@
 
 .App-border-top {
   width: 100%;
-  height: 100px; /* Adjust the height as needed */
-  background-color: rgb(44, 18, 92); /* Purple color */
+  height: 100px; 
+  background-color: rgb(44, 18, 92); 
   display: flex; /* Flexbox for alignment */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
 }
 
 .search-bar {
-  width: 50%; /* Adjust width as needed */
+  width: 50%; 
   max-width: 600px; /* Maximum width */
   padding: 8px; /* Padding inside the search bar */
   border: 4px solid #B7A57A; /* Border with specified color */
   border-radius: 4px; /* Rounded corners */
   font-size: 16px; /* Font size */
+  font-family: 'Bowlby One', cursive;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  left: -65px;
+  justify-content: space-around;
+  height: 32px; /* Adjust the height as needed */
+  cursor: pointer;
+  position: relative;
+}
+
+.bar {
+  width: 30px; /* Width of each bar */
+  height: 4px; /* Height of each bar */
+  background-color: #B7A57A; /* Color of the bars */
+  border-radius: 2px; /* Rounding the edges */
 }
 
 .picture-box {
-  width: 500px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
-  margin: 20px auto; /* Center the box and add some margin */
+  width: 500px; 
+  height: 300px; 
+  margin: 20px auto; 
   border: 4px solid #B7A57A; /* Border color */
   display: flex; /* Flexbox for centering image */
-  flex-direction: column;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+  align-items: center; 
+  justify-content: center; 
   background-color: white; /* Background color for the picture box */
 }
 
 .caption {
-  margin-top: 10px; /* Adjust margin as needed */
+  margin-top: -10px; /* Adjust margin?*/
   text-align: center;
 }
 
 .caption p {
   font-size: 14px; /* Adjust font size as needed */
   color: #333; /* Adjust color as needed */
+  font-family: 'Bowlby One', cursive;
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: 35px; /* Adjust to position below the hamburger menu */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #B7A57A;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: max-content;
+  font-family: 'Bowlby One', cursive;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.button {
+  width: 1000px;
+  padding: 50px;
+  margin: 30px;
+  background-color: #6C519F;
+  border: none;
+  color: #AA9CC6;
+  font-size: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Bowlby One', cursive;
+}
+
+.button:hover {
+  background-color: rgb(44,18,92);
+}
 
 @keyframes App-logo-spin {
   from {
