@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import OUG from './OUG.jpg'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <div className="App-border-top">
+        <div className="hamburger-menu" onClick={toggleMenu}k>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          {menuOpen && (
+          <div className="dropdown-menu">
+            <a href="#">Dining Areas</a>
+            <a href="#">Study Rooms</a>
+            <a href="#">About Us</a>
+          </div>
+          )}
+        </div> 
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search..."
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="content">
+        <div className="picture-box">
+          <img src={OUG} alt="Ode" className="App-image" />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className="caption">
+          <p>Odegaard Undergraduate Library</p>
+        </div>
+      <div className="buttons">
+        <button className="button">Study Rooms</button>
+        <button className="button">Dining Areas</button>
+        <button className="button">Restrooms</button>
+      </div>
+      
+      <header className="App-header">
+        {/* Other content can go here */}
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
