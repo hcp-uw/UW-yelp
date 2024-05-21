@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import OUG from '../public/OUG.jpg';
+import OUG from '../src/assets/OUG.jpg';
 
 function App() {
 
